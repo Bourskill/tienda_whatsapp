@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
+    integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Flickity CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css"
+    integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Flickity JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js"
+    integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Font-awesome JS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- VISUALIZACION CARRUSEL DE IMAGENES -->
+  <template id="slider-product">
+    <div class="fondo">
+      <div class="preview-imgs dontprevnext"></div>
+      <i class="fa-solid fa-circle-xmark equis equis1"></i>
+      <button class="descripcion-btn">
+        <span>Descripcion</span>
+      </button>
+    </div>
+  </template>
+
+  <!-- VISUALIZACION DE IMAGENES DEL PRODUCTO-->
+  <template id="img-producto">
+    <div class="masonry-item">
+      <div class="item">
+        <img src="" loading="lazy">
+        <div class="title">
+          <h3></h3>
+        </div>
+      </div>
+  </template>
+
+  <!-- VISUALIZACION DE DESCRIPCION DEL PRODUCTO-->
+  <template id="card-descripcion">
+    <div class="fondo">
+      <div class="descripcion">
+        <div class="d-info">
+          <div class="d-img"><img src="" alt=""></div>
+          <div class="d-body">
+            <br>
+            <center>
+              <h2>Toston de prueba</h2>
+            </center>
+            <p>Lorem ipsum </p>
+            <h3>$<span>000</span> COP</h3>
+            <div class="cantidad">
+              <h3>cantidad</h3>
+              <div class="numeros">
+                <button><span>+</span></button>
+                <div><span>0</span></div>
+                <button><span>-</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="car-shop btn-invisible">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span> Añadir al carrito</span>
+        </button>
+        <i class="fa-solid fa-circle-xmark equis equis2"></i>
+      </div>
+    </div>
+  </template>
+
+
+  <!-- VISUALIZACION DE CARRITO DE COMPRAS-->
+  <template id="card-shop-menu">
+    <div class="fondo">
+      <div class="car-shoping">
+        <div class="car-shoping-head">
+          <h2>Productos</h2>
+        </div>
+        <div class="car-shoping-body"></div>
+        <div class="car-shoping-footer">
+          <h3>Total a pagar: $<span>10.000</span></h3>
+          <button class="wpp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <!-- <span>hacer pedido</span> -->
+          </button>
+        </div>
+        <i class="fa-solid fa-circle-xmark equis equis3"></i>
+      </div>
+    </div>
+  </template>
+
+
+  <!-- VISUALIZACION DE PRODUCTO EN EL CARRITO DE COMPRAS-->
+  <template id="product-shoping-menu">
+    <div class="shopping-product">
+      <div class="shopping-product-img">
+        <img src="" alt="">
+      </div>
+      <div class="shopping-product-info">
+        <h3>TOSTON DE PRUEBA</h3>
+        <h3>total: $ <span>20.000</span></h3>
+        <h5>$<span>10.000</span>&nbsp;und</h5>
+        <div class="numeros">
+          <button><span>+</span></button>
+          <div><span>0</span></div>
+          <button><span>-</span></button>
+        </div>
+      </div>
+      <button class="trash">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    </div>
+  </template>
+
+
+  <!-- FORMULARIO WHATSAPP PEDIDO -->
+  <template id="wpp-pedido">
+    <div class="fondo">
+      <form class="wpp-pedido" id="wpp-pedido-form">
+        <div class="op-entrega">
+          <button class="retirar naranja">
+            <h3>Lo paso a retirar</h3>
+            <p><i class="fa-solid fa-shop"></i> B/Uribe - Calle 9 # 6-72</p>
+          </button>
+          <button class="enviar">
+            <h3>Lo quiero recibir</h3>
+            <p><i class="fa-solid fa-location-dot"></i> En la puerta de mi casa</p>
+          </button>
+        </div>
+
+        <div class="direccion">
+          <select id="barrio" name="barrio">
+            <option value="">barrio</option>
+          </select>
+          <input type="text" id="precio" name="precio" placeholder="Precio" readonly>
+          <input type="text" id="direccion" name="direccion" placeholder="Ingresa tu dirección aquí">
+        </div>
+
+        <input type="text" id="nombre" class="nombre" name="nombre" placeholder="Nombre" required>
+        <input type="text" id="telefono" class="telefono" name="telefono" placeholder="Teléfono" required>
+        <button class="btn-enviar-p" type="submit">
+          <h2><i class="fa-brands fa-whatsapp hi"></i> Enviar pedido</h2>
+        </button>
+
+        <i class="fa-solid fa-circle-xmark equis equis4"></i>
+      </form>
+    </div>
+  </template>
+
+
+  <!-- DOCUMENT -->
+  <center>
+    <h1>Mis Productos</h1>
+  </center>
+  <div class="masonry"></div>
+
+  <div class="car-icon">
+    <div class="circle">
+      <span>12</span>
+    </div>
+    <i class="fa-solid fa-cart-shopping car"></i>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="app.js" type="module"></script>
+</body>
+
+</html>
