@@ -513,7 +513,15 @@ Total: .................. $ ${((Number(totalApagar) + (Number(precio) * 1000))).
 --------------------------------------------`;
 
 
-  const numeroTelefono = '+573026056195';
+
+  
+  const telefonoColombiaInput = document.getElementById("telefonoprefijo");
+  const numeroTelefono = telefonoColombiaInput.value;
+
+  if (!numeroTelefono) {
+    alert("Por favor, ingrese un número de teléfono con prefijo.");
+    return;
+  }
   const whatsappUrl = 'https://api.whatsapp.com/send?phone=' + numeroTelefono + '&text=' + encodeURIComponent(mensaje);
   window.open(whatsappUrl, '_blank');
 }
