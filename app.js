@@ -9,8 +9,8 @@ const firebaseConfig = {
   projectId: "tostones-6370d",
   storageBucket: "tostones-6370d.appspot.com",
   messagingSenderId: "950636781905",
-  appId: "1:950636781905:web:e2285bdf50c0297968b370",
-  measurementId: "G-4DJGYN9K59"
+  appId: "1:950636781905:web:e5be06fbd224b3ae68b370",
+  measurementId: "G-EG9MFPQNQY"
 };
 
 const app = initializeApp(firebaseConfig);
