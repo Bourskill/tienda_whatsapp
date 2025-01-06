@@ -479,9 +479,9 @@ function mostrarPedido(productosGuardados) {
 }
 
 
-
-
-
+function obtenerNumeroTelefono() {
+  return document.getElementById("telefonoprefijo").value;
+}
 
 function recolectarYenviar(nombre, telefono, barrio, direccion, precio, enviar, productosGuardados) {
   const totalApagar = total(productosGuardados);
@@ -511,17 +511,7 @@ ${lineasProductos}
 Total: .................. $ ${((Number(totalApagar) + (Number(precio) * 1000))).toLocaleString()}
 
 --------------------------------------------`;
-
-
-
-  
-  const telefonoColombiaInput = document.getElementById("telefonoprefijo");
-  const numeroTelefono = telefonoColombiaInput.value;
-
-  if (!numeroTelefono) {
-    alert("Por favor, ingrese un número de teléfono con prefijo.");
-    return;
-  }
+const numeroTelefono = obtenerNumeroTelefono();
   const whatsappUrl = 'https://api.whatsapp.com/send?phone=' + numeroTelefono + '&text=' + encodeURIComponent(mensaje);
   window.open(whatsappUrl, '_blank');
 }
@@ -560,3 +550,17 @@ document.addEventListener('DOMContentLoaded', function () {
   imprimirEstadoArray(estadoAnteriorArray);
   observarCambiosEnArray();
 });
+
+
+document.querySelector(".propietario button").addEventListener("click", () => {
+  const numeroTelefono = obtenerNumeroTelefono();
+  const regexTelefono = /^\+57\d{10}$/;
+  
+  if (regexTelefono.test(numeroTelefono)) {
+    document.querySelector(".propietario").parentElement.style.display = "none";
+  } else {
+    alert("Por favor, ingresa un número de teléfono válido.");
+  }
+});
+
+

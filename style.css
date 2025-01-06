@@ -30,39 +30,48 @@ h1 {
 }
 
 .propietario {
-  width: 400px;
+  width: 600px;
   border: 1px solid white;
-  padding: 10px;
+  padding: 30px;
   margin: 0 auto;
   border-radius: 10px;
-
 
   display: flex;
   flex-direction: column;
 }
 
 .propietario input {
-
   padding: 10px;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .propietario label {
+  font-size: 150%;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .propietario span {
-  margin-top: 10px;
-  font-size: 80%;
+  margin-top: 15px;
   font-weight: 100;
-  opacity: .5;
+  opacity: 0.5;
 }
 
-
-
-
+.propietario button {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #25d366;
+  border: 0px;
+  outline: 0px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 120%;
+}
+.propietario button:hover {
+  background-color: #26b159;
+}
 
 /* Botones */
 .equis,
@@ -70,10 +79,8 @@ h1 {
   font-size: 200%;
   position: absolute;
   cursor: pointer;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
-
-
 
 .equis1 {
   top: 4%;
@@ -103,9 +110,9 @@ h1 {
   border: solid 2px white;
   border-radius: 6px;
 
-  opacity: .5;
+  opacity: 0.5;
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .descripcion-btn i {
@@ -117,7 +124,6 @@ h1 {
 .descripcion-btn:hover,
 .car:hover,
 .equis3:hover {
-
   opacity: 1;
   transform: scale(1.08);
 }
@@ -127,22 +133,16 @@ h1 {
 .descripcion-btn:active,
 .car:active,
 .equis3:active {
-  transform: scale(.8);
+  transform: scale(0.8);
 }
 
 /* Botones */
-
-
-
-
-
-
 
 .masonry {
   max-width: 90%;
   margin: 50px auto;
   opacity: 0;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 .masonry-item {
@@ -185,7 +185,7 @@ h1 {
 
   object-fit: cover;
   will-change: transform;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .item:hover .title {
@@ -203,15 +203,8 @@ h1 {
   transform: translateY(-100%);
   position: absolute;
   opacity: 0;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
-
-
-
-
-
-
-
 
 .fondo {
   width: 100%;
@@ -231,16 +224,31 @@ h1 {
   z-index: 9999999;
 
   opacity: 0;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
 
+.fondonum {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
 
+  position: fixed;
+  display: flex;
 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  top: 0;
+  z-index: 9999999;
+
+  transition: opacity 0.3s;
+}
 
 .fondo-mentiras {
   display: flex;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .preview-imgs {
@@ -269,11 +277,6 @@ h1 {
 .flickity-viewport {
   height: 100% !important;
 }
-
-
-
-
-
 
 .descripcion {
   width: 100%;
@@ -319,11 +322,11 @@ h1 {
   align-items: stretch;
 }
 
-.d-body>* {
+.d-body > * {
   flex: 1;
 }
 
-.d-body>h3 {
+.d-body > h3 {
   margin-top: 15px;
 }
 
@@ -331,8 +334,6 @@ h1 {
   color: rgb(185, 185, 185);
   margin-top: 15px;
 }
-
-
 
 .car-shop {
   width: 100%;
@@ -342,7 +343,7 @@ h1 {
 
   border: none;
   outline: none;
-  opacity: .8;
+  opacity: 0.8;
   cursor: pointer;
 
   transition: background-color 0.1s ease;
@@ -350,9 +351,8 @@ h1 {
 
 .car-shop:hover {
   color: rgb(255, 255, 255);
-  background-color: #25D366;
+  background-color: #25d366;
   opacity: 1;
-
 }
 
 .car-shop:active {
@@ -366,12 +366,10 @@ h1 {
 .btn-invisible {
   background-color: transparent;
   color: rgb(185, 185, 185);
-
 }
 
 .btn-invisible:hover,
 .btn-invisible:active {
-
   cursor: no-drop;
   background-color: transparent;
 }
@@ -379,8 +377,6 @@ h1 {
 .car-shop i {
   margin-right: 5px;
 }
-
-
 
 .cantidad {
   width: 80%;
@@ -405,7 +401,7 @@ h1 {
   overflow: hidden;
 }
 
-.numeros>* {
+.numeros > * {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -413,15 +409,15 @@ h1 {
   color: white;
 }
 
-.numeros>*:nth-child(1),
-.numeros>*:nth-child(3) {
+.numeros > *:nth-child(1),
+.numeros > *:nth-child(3) {
   font-size: 110%;
   font-weight: 900;
   background-color: rgb(35, 35, 35);
   border: none;
 }
 
-.numeros>*:nth-child(2) {
+.numeros > *:nth-child(2) {
   flex: 2;
   cursor: default;
 }
@@ -433,7 +429,7 @@ h1 {
   }
 
   50% {
-    opacity: .3;
+    opacity: 0.3;
   }
 
   100% {
@@ -449,7 +445,7 @@ h1 {
   }
 
   50% {
-    opacity: .3;
+    opacity: 0.3;
   }
 
   100% {
@@ -457,14 +453,6 @@ h1 {
     opacity: 0;
   }
 }
-
-
-
-
-
-
-
-
 
 .car-shoping,
 .wpp-pedido {
@@ -519,20 +507,19 @@ h1 {
   border: none;
   color: white;
   font-size: 110%;
-  background-color: #25D366;
-  opacity: .9;
+  background-color: #25d366;
+  opacity: 0.9;
 
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
 }
 
 .car-shoping-footer button:hover {
-
   opacity: 1;
 }
 
 .car-shoping-footer button:active {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .car-shoping-footer button span {
@@ -576,13 +563,13 @@ h1 {
   padding: 10px;
 }
 
-.shopping-product-info>* {
+.shopping-product-info > * {
   display: flex;
   align-items: center;
 }
 
 .trash {
-  background-color: #D42E26;
+  background-color: #d42e26;
   border-radius: 50%;
   padding: 10px;
 
@@ -598,14 +585,7 @@ h1 {
   color: #ffffff;
 }
 
-
-
-
-
-
-
 @media (min-width: 1025px) {
-
   /* MASONRY */
   .masonry-item {
     width: 20%;
@@ -617,19 +597,14 @@ h1 {
   }
 }
 
-
 @media (max-width: 1024px) {
-
   /* MASONRY */
   .masonry-item {
     width: 25%;
   }
 }
 
-
-
 @media (max-width: 768px) {
-
   /* MASONRY */
   .masonry-item {
     width: 33.33%;
@@ -644,16 +619,16 @@ h1 {
     width: 0;
   }
 
-  .shopping-product-info>*:nth-child(1) {
+  .shopping-product-info > *:nth-child(1) {
     grid-column: 1 / span 2;
   }
 
-  .shopping-product-info>*:nth-child(2) {
+  .shopping-product-info > *:nth-child(2) {
     grid-column: 1;
     grid-row: 2;
   }
 
-  .shopping-product-info>*:nth-child(3) {
+  .shopping-product-info > *:nth-child(3) {
     display: none;
   }
 
@@ -667,16 +642,12 @@ h1 {
   }
 }
 
-
 @media (max-width: 524px) {
-
   /* MASONRY */
   .masonry-item {
     width: 50%;
   }
 }
-
-
 
 .wpp-pedido {
   max-width: 600px;
@@ -688,7 +659,7 @@ h1 {
 
   opacity: 1;
   will-change: opacity;
-  transition: opacity .5s ease-out;
+  transition: opacity 0.5s ease-out;
 
   overflow: hidden;
 
@@ -749,16 +720,16 @@ h1 {
   margin-bottom: 20px;
 }
 
-.direccion>* {
+.direccion > * {
   flex: 1;
   border-left: 1px solid #ccc;
 }
 
-.direccion>*:nth-child(2) {
+.direccion > *:nth-child(2) {
   width: 10%;
 }
 
-.direccion>*:nth-child(3) {
+.direccion > *:nth-child(3) {
   flex: 5 !important;
 }
 
@@ -769,14 +740,9 @@ h1 {
 
 .nombre,
 .telefono,
-.direccion>*:nth-child(3) {
+.direccion > *:nth-child(3) {
   font-size: 105%;
 }
-
-
-
-
-
 
 .btn-enviar-p {
   background-color: #333;
@@ -793,8 +759,7 @@ h1 {
 }
 
 .btn-enviar-p:hover {
-
-  background-color: #25D366;
+  background-color: #25d366;
 }
 
 .car-icon {
